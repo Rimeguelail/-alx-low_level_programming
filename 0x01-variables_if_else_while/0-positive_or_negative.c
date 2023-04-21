@@ -15,4 +15,4 @@ julien@ubuntu:~/0x01$ ./0-positive_or_negative
 -48147767 is negative
 julien@ubuntu:~/0x01$ ./0-positive_or_negative 
 0 is zero
-julien@ubuntu:~/0x01$ 
+julien@ubuntu:~/0x01$
