@@ -1,28 +1,36 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-last_digit.c -o 1-last_digit
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 629438752 is 2 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -748255693 is -3 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -1052791662 is -2 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -284805734 is -4 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -284805734 is -4 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 491506926 is 6 and is greater than 5
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 954249937 is 7 and is greater than 5
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 652334952 is 2 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -729688197 is -7 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of -729688197 is -7 and is less than 6 and not 0
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 45528266 is 6 and is greater than 5
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 45528266 is 6 and is greater than 5
-julien@ubuntu:~/0x01$ ./1-last_digit 
-Last digit of 809065140 is 0 and is 0
-julien@ubuntu:~/0x01$
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - Prints the last digit of a randomly generated number
+ * and whether it is greater than 5, less than 6, or 0.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if ((n % 10) > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n",
+			n, n % 10);
+	}
+	else if ((n % 10) < 6 && (n % 10) != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n",
+			n, n % 10);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is 0\n",
+			n, n % 10);
+	}
+
+	return (0);
+
+}

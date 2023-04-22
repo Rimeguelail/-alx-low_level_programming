@@ -1,4 +1,22 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-print_base16.c -o 8-print_base16
-julien@ubuntu:~/0x01$ ./8-print_base16
-0123456789abcdef
-julien@ubuntu:~/0x01$
+#include <stdio.h>
+
+/**
+ * main - Prints numbers between 0 to 9 and letters between a to f.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+	}
+	for (i = 97; i < 103; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
+}

@@ -1,4 +1,18 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-print_numberz.c -o 6-print_numberz
-julien@ubuntu:~/0x01$ ./6-print_numberz 
-0123456789
-julien@ubuntu:~/0x01$ 
+#include <stdio.h>
+
+/**
+ * main - Prints numbers from 0 to 9.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
+}

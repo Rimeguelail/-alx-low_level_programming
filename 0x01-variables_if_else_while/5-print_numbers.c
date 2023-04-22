@@ -1,4 +1,18 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-print_numbers.c -o 5-print_numbers
-julien@ubuntu:~/0x01$ ./5-print_numbers 
-0123456789
-julien@ubuntu:~/0x01$ 
+#include <stdio.h>
+
+/**
+ * main - Prints numbers from 0 to 9.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	putchar('\n');
+	return (0);
+}

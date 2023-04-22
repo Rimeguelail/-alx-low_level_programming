@@ -1,4 +1,22 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
-julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
-julien@ubuntu:~/0x01$
+#include <stdio.h>
+
+/**
+ * main - prints all possible combinations of single-digit numbers
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
+
+	for (n = 48; n < 58; n++)
+	{
+		putchar(n);
+		if (n != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
+}

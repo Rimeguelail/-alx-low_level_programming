@@ -1,4 +1,19 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-print_alphabets.c -o 3-print_alphabets
-julien@ubuntu:~/0x01$ ./3-print_alphabets | cat -e
-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
-julien@ubuntu:~/0x01$ 
+#include <stdio.h>
+
+/**
+ * main - Prints the alphabet.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i;
+
+	for (i = 0; i < 52; i++)
+	{
+		putchar(alp[i]);
+	}
+	putchar('\n');
+	return (0);
+}

@@ -1,4 +1,18 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-print_tebahpla.c -o 7-print_tebahpla
-julien@ubuntu:~/0x01$ ./7-print_tebahpla
-zyxwvutsrqponmlkjihgfedcba
-julien@ubuntu:~/0x01$
+#include <stdio.h>
+
+/**
+ * main - prints the lowercase alphabet in reverse,
+ * followed by a new line
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char ch;
+
+	for (ch = 'z'; ch >= 'a'; ch--)
+	{
+		putchar(ch);
+	}
+	putchar('\n');
+	return (0);
+}

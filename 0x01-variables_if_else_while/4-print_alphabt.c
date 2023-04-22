@@ -1,5 +1,23 @@
-julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-print_alphabt.c -o 4-print_alphabt
-julien@ubuntu:~/0x01$ ./4-print_alphabt 
-abcdfghijklmnoprstuvwxyz
-julien@ubuntu:~/0x01$ ./4-print_alphabt | grep [eq]
-julien@ubuntu:~/0x01$ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * main - Prints the alphabet without q and e.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 97; i < 123; i++)
+	{
+		if (i != 101 && i != 113)
+		{
+			putchar(i);
+		}
+	}
+	putchar('\n');
+	return (0);
+}
