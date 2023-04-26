@@ -1,51 +1,30 @@
-#include "main.h"
-
- 
+#include <stdio.h>
 
 /**
-* print_times_table - prints the n times table, starting with 0
-* @n: number of the times table
-*/
-void print_times_table(int n)
+ * main - something
+ * Return: something
+ */
+int main(void)
 {
-        int i, j, k;
+	long int i, j, k, l;
 
- 
+	j = 1;
 
-        if (n >= 0 && n <= 15)
-        {
-                for (i = 0; i <= n; i++)
-                {
-                        for (j = 0; j <= n; j++)
-                        {
-                                k = j * i;
-                                if (j == 0)
-                                {
-                                        _putchar(k + '0');
-                                } else if (k < 10 && j != 0)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                        _putchar(' ');
-                                        _putchar(' ');
-                                        _putchar(k + '0');
-                                } else if (k >= 10 && k < 100)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                        _putchar(' ');
-                                        _putchar((k / 10) + '0');
-                                        _putchar((k % 10) + '0');
-                                } else if (k >= 100)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                        _putchar((k / 100) + '0');
-                                        _putchar(((k / 10) % 10) + '0');
-                                        _putchar((k % 10) + '0');
-                                }
-                        }
-                        _putchar('\n');
-                }
-        }
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
+	{
+		if (j != 20365011074)
+		{
+			printf("%ld, ", j);
+		} else
+		{
+			printf("%ld\n", j);
+		}
+		l = j + k;
+		j = k;
+		k = l;
+	}
+
+	return (0);
 }
